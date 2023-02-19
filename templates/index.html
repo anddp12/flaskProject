@@ -3,26 +3,42 @@
     {% include 'header.html' %}
 
     <main>
-        <div class="container container-md text-center" style="margin:80px">
-            <div class="row">
-                <div class="col-md-12 bg-success">Temperature</div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"></use></svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4"><a href="" class="nav-link">Temperature</a></h3>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
             </div>
-            <div class="row">
-                <div class="col-md-12 bg-info">Humidity</div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4"><a href="" class="nav-link">Humidity</a></h3>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
             </div>
-            <div class="row" >
-                <div class="col-md-3 bg-warning">Meter</div>
-                <div class="col-md-3 bg-warning">electricity</div>
-                <div class="col-md-3 bg-warning">gas</div>
-                <div class="col-md-3 bg-warning">water</div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4"><a href="" class="nav-link">Meter</a></h3>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
             </div>
-            <div class="row">
-                <div class="col-md-3 bg-danger">Boiler</div>
-                <div class="col-md-3 bg-danger">isRun</div>
-                <div class="col-md-3 bg-danger">temperature</div>
-                <div class="col-md-3 bg-danger">pressure</div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4"><a href="" class="nav-link">Boiler</a></h3>
+              <p>Paragraph of text beneath the heading to explain the heading.</p>
             </div>
+          </div>
         </div>
+
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2018/01/21/10/01/smart-home-3096224_1280.jpg" class="d-block w-100 h-50" alt="...">
+        </div>
+
     </main>
 
     {% include 'footer.html' %}
