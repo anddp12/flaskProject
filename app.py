@@ -43,7 +43,12 @@ def meter():  # put application's code here
 
 @app.route('/boiler')
 def boiler():  # put application's code here
-    return render_template("boiler.html")
+    response = requests.get("http://localhost:5000/api")
+    json_data = json.loads(response.text)
+    boiler1 = json_data['boiler']['isRun']
+    boiler2 = json_data['boiler']['temperature']
+    boiler3 = json_data['boiler']['pressure']
+    return render_template("boiler.html", boiler1=boiler1, boiler2=boiler2, boiler3=boiler3)
 
 
 @app.route('/api')
