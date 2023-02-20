@@ -3,13 +3,58 @@
     {% include 'header.html' %}
 
     <main class="container">
-        <div class="bg-light p-5 rounded mt-3">
-            <h1>Meter</h1>
-            <p class="lead">indicator data......</p>
-{#            <a class="btn btn-lg btn-primary"#}
-{#               href="https://ru.wikipedia.org/wiki/%D0%A1%D1%87%D1%91%D1%82%D1%87%D0%B8%D0%BA" role="button">View docs#}
-{#                »</a>#}
+
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 text-center">
+            <div class="feature col">
+{#                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">#}
+{#                    <svg class="bi" width="1em" height="1em">#}
+{#                        <use xlink:href="#collection"></use>#}
+{#                    </svg>#}
+{#                </div>#}
+                <h3 class="fs-2">Electric meter</h3>
+                <p class="lead">reading: {{ electricity1 }}</p>
+                <p class="lead">consumption: {{ electricity2 }}</p>
+{#                <a href="#" class="icon-link d-inline-flex align-items-center">#}
+{#                    Call to action#}
+{#                    <svg class="bi" width="1em" height="1em">#}
+{#                        <use xlink:href="#chevron-right"></use>#}
+{#                    </svg>#}
+{#                </a>#}
+            </div>
+            <div class="feature col">
+{#                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">#}
+{#                    <svg class="bi" width="1em" height="1em">#}
+{#                        <use xlink:href="#people-circle"></use>#}
+{#                    </svg>#}
+{#                </div>#}
+                <h3 class="fs-2">Gas meter</h3>
+                <p class="lead">reading: {{ gas1 }}</p>
+                <p class="lead">consumption: {{ gas2 }}</p>
+{#                <a href="#" class="icon-link d-inline-flex align-items-center">#}
+{#                    Call to action#}
+{#                    <svg class="bi" width="1em" height="1em">#}
+{#                        <use xlink:href="#chevron-right"></use>#}
+{#                    </svg>#}
+{#                </a>#}
+            </div>
+            <div class="feature col">
+{#                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">#}
+{#                    <svg class="bi" width="1em" height="1em">#}
+{#                        <use xlink:href="#toggles2"></use>#}
+{#                    </svg>#}
+{#                </div>#}
+                <h3 class="fs-2">Water meter</h3>
+                <p class="lead">reading: {{ water1 }}</p>
+                <p class="lead">consumption: {{ water2 }}</p>
+{#                <a href="#" class="icon-link d-inline-flex align-items-center">#}
+{#                    Call to action#}
+{#                    <svg class="bi" width="1em" height="1em">#}
+{#                        <use xlink:href="#chevron-right"></use>#}
+{#                    </svg>#}
+{#                </a>#}
+            </div>
         </div>
+
     </main>
 
 

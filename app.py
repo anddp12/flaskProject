@@ -30,7 +30,15 @@ def hum():  # put application's code here
 
 @app.route('/meter')
 def meter():  # put application's code here
-    return render_template("meter.html")
+    response = requests.get("http://localhost:5000/api")
+    json_data = json.loads(response.text)
+    electricity1 = json_data['meter']['electricity']['reading']
+    electricity2 = json_data['meter']['electricity']['consumption']
+    gas1 = json_data['meter']['gas']['reading']
+    gas2 = json_data['meter']['gas']['consumption']
+    water1 = json_data['meter']['water']['reading']
+    water2 = json_data['meter']['water']['consumption']
+    return render_template("meter.html", electricity1=electricity1, electricity2=electricity2, gas1=gas1, gas2=gas2, water1=water1, water2=water2)
 
 
 @app.route('/boiler')
