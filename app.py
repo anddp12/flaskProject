@@ -13,6 +13,12 @@ def home():  # put application's code here
     return render_template("index.html", head1="head", title=title)
 
 
+@app.route('/contact')
+def contact():  # put application's code here
+    title = 'Contact'
+    return render_template("contact.html", head1="head", title=title)
+
+
 @app.route('/temp')
 def temp():  # put application's code here
     title = 'Temperature'
@@ -42,7 +48,8 @@ def meter():  # put application's code here
     gas2 = json_data['meter']['gas']['consumption']
     water1 = json_data['meter']['water']['reading']
     water2 = json_data['meter']['water']['consumption']
-    return render_template("meter.html", electricity1=electricity1, electricity2=electricity2, gas1=gas1, gas2=gas2, water1=water1, water2=water2, title=title)
+    return render_template("meter.html", electricity1=electricity1, electricity2=electricity2, gas1=gas1, gas2=gas2,
+                           water1=water1, water2=water2, title=title)
 
 
 @app.route('/boiler')
