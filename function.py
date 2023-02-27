@@ -1,6 +1,7 @@
 import requests
 import json
 from flask import render_template
+import random
 
 
 def temp():
@@ -42,3 +43,23 @@ def boiler():
     boiler2 = json_data['boiler']['temperature']
     boiler3 = json_data['boiler']['pressure']
     return render_template("boiler.html", boiler1=boiler1, boiler2=boiler2, boiler3=boiler3, title=title)
+
+
+def api():
+    obj = None
+    with open('static/example.json', 'r') as file:
+        obj = json.load(file)
+
+    obj['temperature'] = random.randint(18, 25)
+    obj['humidity'] = random.randint(40, 100)
+    obj['meter']['electricity']['reading'] = round(random.uniform(12345.9, 12347.9), 3)
+    obj['meter']['electricity']['consumption'] = round(random.uniform(0.1, 2.0), 1)
+    obj['meter']['gas']['reading'] = round(random.uniform(2367.9, 2369.9), 3)
+    obj['meter']['gas']['consumption'] = round(random.random(), 1)
+    obj['meter']['water']['reading'] = round(random.uniform(1212.9, 1214.9), 3)
+    obj['meter']['water']['consumption'] = round(random.uniform(0.1, 1.0), 1)
+    obj['boiler']['isRun'] = random.choice([True, False])
+    obj['boiler']['temperature'] = random.randint(60, 80)
+    obj['boiler']['pressure'] = round(random.uniform(1.0, 2.0), 1)
+
+    return json.dumps(obj)
