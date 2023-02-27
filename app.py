@@ -19,7 +19,13 @@ def contact():  # put application's code here
     return render_template("contact.html", head1="head", title=title)
 
 
-@app.route('/temp')
+@app.route('/about')
+def about():  # put application's code here
+    title = 'About'
+    return render_template("about.html", head1="head", title=title)
+
+
+@app.route('/temperature')
 def temp():  # put application's code here
     title = 'Temperature'
     response = requests.get("http://localhost:5000/api")
@@ -87,6 +93,9 @@ def api():
 @app.errorhandler(404)
 def page_not_found(error):
     return send_file('static/404.html'), 404
+
+
+
 
 
 if __name__ == '__main__':
